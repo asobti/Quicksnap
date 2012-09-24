@@ -1,0 +1,26 @@
+﻿<Window Name="theWindow" x:Class="bamsak.Edit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit" Height="579" Width="689" >
+    <Grid Name="theGrid">        
+        <Button ToolTip="Highlight area between mouse press and mouse release" Content="Highlight" Height="23" HorizontalAlignment="Right" Margin="0,12,12,0" Name="btn_Highlight" VerticalAlignment="Top" Width="75" Click="btn_Highlight_Click" />
+        <InkCanvas Name ="imgViewer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="0,0,93,0" EditingMode="None">
+            <Rectangle x:Name="ROI" Stroke="#FFF1133E" Width="0" Height="0" />
+        </InkCanvas>
+        <Button ToolTip="Add text box between mouse press and mouse release" Content="Add Text" Height="23" HorizontalAlignment="Right" Margin="0,133,12,0" Name="btn_AddText" VerticalAlignment="Top" Width="75" Click="btn_AddText_Click" />
+        <Button ToolTip="Redo last undo" Content="Redo" Height="23" HorizontalAlignment="Right" Margin="0,346,12,0" Name="btn_Redo" VerticalAlignment="Top" Width="75" Click="btn_Redo_Click" />
+        <Button ToolTip="Undo last edit" Content="Undo" Height="23" HorizontalAlignment="Right" Margin="0,399,12,0" Name="btn_Undo" VerticalAlignment="Top" Width="75" Click="btn_Undo_Click" />
+        <ComboBox ToolTip="Highlight color" Height="23" Margin="0,41,12,0" Name="combo_HighlightColor" VerticalAlignment="Top" Text="Color" HorizontalAlignment="Right" Width="75" SelectionChanged="combo_HighlightColor_SelectionChanged" />
+        <Slider ToolTip="Opacity" Height="23" HorizontalAlignment="Right" Margin="0,70,12,0" Name="opacitySlider" VerticalAlignment="Top" Width="75" ValueChanged="opacitySlider_ValueChanged" Maximum="1" SmallChange="0.01" LargeChange="0.1" TickFrequency="0.01" IsSnapToTickEnabled="True" />
+        <Label Content="% " Height="28" HorizontalAlignment="Right" Margin="0,99,18,0" Name="opacityLabel" VerticalAlignment="Top" Width="69" />
+        <Button ToolTip="Clear all edits and reset to original state (Cannot be undone)" Content="Reset" Height="23" HorizontalAlignment="Right" Margin="0,452,12,0" Name="btn_Reset" VerticalAlignment="Top" Width="75" Click="btn_Reset_Click" />
+        <Button ToolTip="Crop image between mouse press and mouse release" Content="Crop" Height="23" HorizontalAlignment="Right" Margin="0,293,12,0" Name="btn_Crop" VerticalAlignment="Top" Width="75" Click="btn_Crop_Click" />
+        <Button ToolTip="Complete editing" Content="Done" Height="23" HorizontalAlignment="Right" Margin="0,505,12,0" Name="btn_Done" VerticalAlignment="Top" Width="75" Click="btn_Done_Click" />
+        <ComboBox ToolTip="Text box background" Height="23" HorizontalAlignment="Right" Margin="0,162,12,0" Name="combo_TextBoxBackground" VerticalAlignment="Top" Width="75" SelectionChanged="combo_TextBoxBackground_SelectionChanged" />
+        <TextBox ToolTip="Image width in pixels" Margin="0,191,48,0" Name="textBox_Width" HorizontalAlignment="Right" Width="39" Height="20" VerticalAlignment="Top" />
+        <TextBox ToolTip="Image height in pixels" Height="20" HorizontalAlignment="Right" Margin="0,216,48,0" Name="textBox_Height" VerticalAlignment="Top" Width="39" />
+        <Label Content="by" Height="28" HorizontalAlignment="Right" Margin="0,187,18,0" Name="label1" VerticalAlignment="Top" Width="31" />
+        <CheckBox ToolTip="Maintain aspect ratio" Height="16" HorizontalAlignment="Right" Margin="0,219,18,0" Name="checkBox1" VerticalAlignment="Top" />
+        <Button Content="Resize" Height="23" HorizontalAlignment="Right" Margin="0,242,12,0" Name="btn_Resize" VerticalAlignment="Top" Width="75" Click="btn_Resize_Click" />
+    </Grid>
+</Window>

@@ -1,0 +1,9 @@
+﻿<Window x:Name="QuickSnap" x:Class="bamsak.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+    	<Button x:Name="btnScreenshot" Content="Take Screenshot" Margin="152,0,152,22" VerticalAlignment="Bottom" Height="37.96" Click="btnScreenshot_Click" Width="200" />
+        <Image Height="212" HorizontalAlignment="Center" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="503" Source="/bamsak;component/Images/image001.png" />
+    </Grid>
+</Window>
